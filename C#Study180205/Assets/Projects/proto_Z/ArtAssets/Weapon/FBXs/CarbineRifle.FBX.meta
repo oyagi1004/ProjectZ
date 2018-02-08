@@ -1,0 +1,148 @@
+fileFormatVersion: 2
+guid: 4777500466dc36448921be5b6558696c
+timeCreated: 1507912889
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bip001 Footsteps
+    100002: //RootNode
+    100004: Hand
+    100006: Laser_poniter
+    100008: Optic01
+    100010: Optic02
+    100012: Optic03
+    100014: Silencer
+    100016: Stock01
+    100018: Stock02
+    100020: CrifleHand
+    100022: Dummy003
+    100024: Crifle_body
+    100026: CriflePoint_Hand
+    100028: CriflePoint_Equip
+    400000: Bip001 Footsteps
+    400002: //RootNode
+    400004: Hand
+    400006: Laser_poniter
+    400008: Optic01
+    400010: Optic02
+    400012: Optic03
+    400014: Silencer
+    400016: Stock01
+    400018: Stock02
+    400020: CrifleHand
+    400022: Dummy003
+    400024: Crifle_body
+    400026: CriflePoint_Hand
+    400028: CriflePoint_Equip
+    2300000: //RootNode
+    2300002: Hand
+    2300004: Laser_poniter
+    2300006: Optic01
+    2300008: Optic02
+    2300010: Optic03
+    2300012: Silencer
+    2300014: Stock01
+    2300016: Stock02
+    2300018: Crifle_body
+    3300000: //RootNode
+    3300002: Hand
+    3300004: Laser_poniter
+    3300006: Optic01
+    3300008: Optic02
+    3300010: Optic03
+    3300012: Silencer
+    3300014: Stock01
+    3300016: Stock02
+    3300018: Crifle_body
+    4300000: Crifle_body
+    4300002: Optic01
+    4300004: Laser_poniter
+    4300006: Silencer
+    4300008: Optic03
+    4300010: Optic02
+    4300012: Hand
+    4300014: Stock02
+    4300016: Stock01
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

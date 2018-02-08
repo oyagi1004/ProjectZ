@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: 78a8746b77e5ba94a8019116fdd7b9b3
+timeCreated: 1516205747
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Blocks_House_05_B007
+    100002: Building_022_Elements143
+    100004: Building_022_Elements43
+    100006: Building_022_Elements44
+    100008: Building_026_Elements1
+    100010: Object040
+    100012: Object042
+    100014: Object044
+    100016: Object046
+    100018: Object066
+    100020: //RootNode
+    100022: Store_front_101_Elements16
+    100024: Trottoir_039_Elements027
+    100026: Trottoir_057_Elements1
+    100028: Trottoir_058_Elements13
+    100030: Trottoir_063_Elements1
+    400000: Blocks_House_05_B007
+    400002: Building_022_Elements143
+    400004: Building_022_Elements43
+    400006: Building_022_Elements44
+    400008: Building_026_Elements1
+    400010: Object040
+    400012: Object042
+    400014: Object044
+    400016: Object046
+    400018: Object066
+    400020: //RootNode
+    400022: Store_front_101_Elements16
+    400024: Trottoir_039_Elements027
+    400026: Trottoir_057_Elements1
+    400028: Trottoir_058_Elements13
+    400030: Trottoir_063_Elements1
+    2100000: Wall07
+    2100002: Rubble01
+    2100004: Wall06
+    2100006: Wall08
+    2100008: wall04
+    2100010: 20 - Default
+    2100012: Gate01
+    2100014: door03
+    2100016: Door04
+    2100018: 16 - Default
+    2100020: Street_Concrete_02
+    2100022: fence02
+    2100024: Wall02
+    2100026: Door02
+    2100028: Mat_Concrete_04
+    2300000: Blocks_House_05_B007
+    2300002: Building_022_Elements143
+    2300004: Building_022_Elements43
+    2300006: Building_022_Elements44
+    2300008: Building_026_Elements1
+    2300010: Object040
+    2300012: Object042
+    2300014: Object044
+    2300016: Object046
+    2300018: Object066
+    2300020: Store_front_101_Elements16
+    2300022: Trottoir_039_Elements027
+    2300024: Trottoir_057_Elements1
+    2300026: Trottoir_058_Elements13
+    2300028: Trottoir_063_Elements1
+    3300000: Blocks_House_05_B007
+    3300002: Building_022_Elements143
+    3300004: Building_022_Elements43
+    3300006: Building_022_Elements44
+    3300008: Building_026_Elements1
+    3300010: Object040
+    3300012: Object042
+    3300014: Object044
+    3300016: Object046
+    3300018: Object066
+    3300020: Store_front_101_Elements16
+    3300022: Trottoir_039_Elements027
+    3300024: Trottoir_057_Elements1
+    3300026: Trottoir_058_Elements13
+    3300028: Trottoir_063_Elements1
+    4300000: Building_026_Elements1
+    4300002: Object066
+    4300004: Store_front_101_Elements16
+    4300006: Blocks_House_05_B007
+    4300008: Object042
+    4300010: Object044
+    4300012: Building_022_Elements43
+    4300014: Building_022_Elements44
+    4300016: Object046
+    4300018: Building_022_Elements143
+    4300020: Trottoir_063_Elements1
+    4300022: Trottoir_058_Elements13
+    4300024: Object040
+    4300026: Trottoir_039_Elements027
+    4300028: Trottoir_057_Elements1
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

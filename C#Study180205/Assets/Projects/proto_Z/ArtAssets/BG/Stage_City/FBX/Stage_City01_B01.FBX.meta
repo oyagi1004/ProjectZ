@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: 4875dd8a18848be4b913312176fca247
+timeCreated: 1516597080
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Damaged_Road_Part_004_Elements1
+    100002: Model_Road2_Part_06_B001_Elements1
+    100004: Model_Road2_Part_07_C001_Elements1
+    100006: Model_Road2_Part_07_D001_Elements2
+    100008: Model_Road2_Part_07_D002_Elements2
+    100010: Model_Road2_Part_07_D003_Elements2
+    100012: Model_Road2_Part_07_D004_Elements2
+    100014: Model_Road2_Part_07_D005_Elements2
+    100016: Model_Road2_Part_07_D006_Elements2
+    100018: Object001
+    100020: Object005
+    100022: Object006
+    100024: Object007
+    100026: Object008
+    100028: Object009
+    100030: Object010
+    100032: Object011
+    100034: Object012
+    100036: Object013
+    100038: Object014
+    100040: Object053
+    100042: Object067
+    100044: Object068
+    100046: //RootNode
+    100048: Trottoir_050_Elements1
+    100050: Trottoir_093_Elements1
+    400000: Damaged_Road_Part_004_Elements1
+    400002: Model_Road2_Part_06_B001_Elements1
+    400004: Model_Road2_Part_07_C001_Elements1
+    400006: Model_Road2_Part_07_D001_Elements2
+    400008: Model_Road2_Part_07_D002_Elements2
+    400010: Model_Road2_Part_07_D003_Elements2
+    400012: Model_Road2_Part_07_D004_Elements2
+    400014: Model_Road2_Part_07_D005_Elements2
+    400016: Model_Road2_Part_07_D006_Elements2
+    400018: Object001
+    400020: Object005
+    400022: Object006
+    400024: Object007
+    400026: Object008
+    400028: Object009
+    400030: Object010
+    400032: Object011
+    400034: Object012
+    400036: Object013
+    400038: Object014
+    400040: Object053
+    400042: Object067
+    400044: Object068
+    400046: //RootNode
+    400048: Trottoir_050_Elements1
+    400050: Trottoir_093_Elements1
+    2100000: 'Material #53'
+    2100002: 08 - Default
+    2100004: 'Material #54'
+    2100006: 'Material #78'
+    2100008: Mat_Concrete_04
+    2100010: Street_Concrete_01
+    2300000: Damaged_Road_Part_004_Elements1
+    2300002: Model_Road2_Part_06_B001_Elements1
+    2300004: Model_Road2_Part_07_C001_Elements1
+    2300006: Model_Road2_Part_07_D001_Elements2
+    2300008: Model_Road2_Part_07_D002_Elements2
+    2300010: Model_Road2_Part_07_D003_Elements2
+    2300012: Model_Road2_Part_07_D004_Elements2
+    2300014: Model_Road2_Part_07_D005_Elements2
+    2300016: Model_Road2_Part_07_D006_Elements2
+    2300018: Object001
+    2300020: Object005
+    2300022: Object006
+    2300024: Object007
+    2300026: Object008
+    2300028: Object009
+    2300030: Object010
+    2300032: Object011
+    2300034: Object012
+    2300036: Object013
+    2300038: Object014
+    2300040: Object053
+    2300042: Object067
+    2300044: Object068
+    2300046: Trottoir_050_Elements1
+    2300048: Trottoir_093_Elements1
+    3300000: Damaged_Road_Part_004_Elements1
+    3300002: Model_Road2_Part_06_B001_Elements1
+    3300004: Model_Road2_Part_07_C001_Elements1
+    3300006: Model_Road2_Part_07_D001_Elements2
+    3300008: Model_Road2_Part_07_D002_Elements2
+    3300010: Model_Road2_Part_07_D003_Elements2
+    3300012: Model_Road2_Part_07_D004_Elements2
+    3300014: Model_Road2_Part_07_D005_Elements2
+    3300016: Model_Road2_Part_07_D006_Elements2
+    3300018: Object001
+    3300020: Object005
+    3300022: Object006
+    3300024: Object007
+    3300026: Object008
+    3300028: Object009
+    3300030: Object010
+    3300032: Object011
+    3300034: Object012
+    3300036: Object013
+    3300038: Object014
+    3300040: Object053
+    3300042: Object067
+    3300044: Object068
+    3300046: Trottoir_050_Elements1
+    3300048: Trottoir_093_Elements1
+    4300000: Object067
+    4300002: Model_Road2_Part_07_D002_Elements2
+    4300004: Model_Road2_Part_07_D005_Elements2
+    4300006: Object008
+    4300008: Model_Road2_Part_06_B001_Elements1
+    4300010: Object011
+    4300012: Object001
+    4300014: Object005
+    4300016: Object053
+    4300018: Damaged_Road_Part_004_Elements1
+    4300020: Object014
+    4300022: Object007
+    4300024: Object010
+    4300026: Object068
+    4300028: Model_Road2_Part_07_D001_Elements2
+    4300030: Model_Road2_Part_07_C001_Elements1
+    4300032: Model_Road2_Part_07_D004_Elements2
+    4300034: Model_Road2_Part_07_D006_Elements2
+    4300036: Model_Road2_Part_07_D003_Elements2
+    4300038: Trottoir_093_Elements1
+    4300040: Trottoir_050_Elements1
+    4300042: Object012
+    4300044: Object013
+    4300046: Object009
+    4300048: Object006
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

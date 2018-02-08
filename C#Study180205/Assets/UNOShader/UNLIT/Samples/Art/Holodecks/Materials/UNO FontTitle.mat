@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UNO FontTitle
+  m_Shader: {fileID: 4800000, guid: 993ea80fb01b0284a83c719fc2ef0e88, type: 3}
+  m_ShaderKeywords: BASE_UNLIT CUSTOMLIGHTMAP_OFF maskTex_OFF mathPixel_OFF
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BRDF:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cube:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DecalTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DiffuseTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlowTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Illum:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightmapTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MasksTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AMBIENT: 0
+    - _BASE: 0
+    - _BRDFBrightness: 0
+    - _CUSTOMLIGHTMAP: 0
+    - _CUSTOMSHADOW: 0
+    - _CubeBias: 1
+    - _CubeOpacity: 1
+    - _Cutoff: 0.5
+    - _EDGETRANSPARENCY: 0
+    - _EmissionBakeIntensity: 2
+    - _EmissionIntensity: 1
+    - _EmissionLM: 1
+    - _EmissionV: 1
+    - _GlowV: 1
+    - _LDIR: 0
+    - _MainTexOpacity: 1
+    - _REFCUSTOM: 0
+    - _RefAmount: 1
+    - _RefBias: 1
+    - _RimBias: 1
+    - _XRAYEDGE: 0
+    - _lmUV1: 0
+    - _maskTex: 0
+    - _mathPixel: 0
+    m_Colors:
+    - _Color: {r: 0.8897059, g: 0.7838616, b: 0.43831098, a: 1}
+    - _ColorBase: {r: 0.2418361, g: 0.52205884, b: 0.29015037, a: 1}
+    - _DecalColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DiffuseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 0.7, b: 0.3, a: 0}
+    - _GlowColor: {r: 1, g: 0.7, b: 0.3, a: 0}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
