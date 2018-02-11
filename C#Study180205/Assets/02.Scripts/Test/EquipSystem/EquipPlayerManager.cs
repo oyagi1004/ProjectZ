@@ -10,7 +10,7 @@ public class EquipPlayerManager : MonoBehaviour {
 
     public static EquipPlayerManager Instance
     {
-        get 
+        get
         {
             return instance;
         }
@@ -49,11 +49,14 @@ public class EquipPlayerManager : MonoBehaviour {
     public Transform PrimaryShotPoint; //총구 트랜스폼
     public Transform SubShotPoint;
 
+    //연사속도.(데이터값 파싱.)
+    public float SHootRate = 0.05f;
+
     //총알 레이캐스트 변수.
     int RifleDist = 15;
     int PistolDist = 10;
     RaycastHit RayCastData;
-     
+
 
     float pistolDamage = 5f;
     float rifleDamage = 1f;
@@ -75,9 +78,9 @@ public class EquipPlayerManager : MonoBehaviour {
     public List<Flock> DetectedEnemies;
     Flock TargetFlock;
 
-    void Awake ()
+    void Awake()
     {
-        if(instance != null)
+        if (instance != null)
         {
             DestroyImmediate(gameObject);
             return;
@@ -88,9 +91,9 @@ public class EquipPlayerManager : MonoBehaviour {
         DontDestroyOnLoad(this);
     }
 
-	void Start () {
+    void Start() {
         Init();
-	}
+    }
 
     public void Init()
     {
@@ -105,7 +108,7 @@ public class EquipPlayerManager : MonoBehaviour {
 
         Transform[] allchilds = transform.GetComponentsInChildren<Transform>();
 
-        for(int i = 0; i < allchilds.Length; i++)
+        for (int i = 0; i < allchilds.Length; i++)
         {
             if (allchilds[i].name == "Point001") PrimaryCarryPoint = allchilds[i];
 
@@ -138,7 +141,7 @@ public class EquipPlayerManager : MonoBehaviour {
 
         DetectedEnemies = new List<Flock>();
     }
-	
+
     void SetDetectionCol()
     {
         if (weaponMode == WeaponMode.NONE)
@@ -149,18 +152,9 @@ public class EquipPlayerManager : MonoBehaviour {
             DetectionCol.size = new Vector3(PistolDist * Mathf.Tan(FieldOfView * Mathf.Deg2Rad) * 2f, 1f, PistolDist);
 
         DetectionCol.center = new Vector3(0, 0, DetectionCol.size.z / 2f);
-
-        //if (weaponMode == WeaponMode.NONE)
-        //    DetectionBound.size = new Vector3(1,1,1);
-        //else if (weaponMode == WeaponMode.PRIMARY)
-        //    DetectionBound.size = new Vector3(RifleDist * Mathf.Tan(FieldOfView * Mathf.Deg2Rad) * 2f, 1f, RifleDist);
-        //else if (weaponMode == WeaponMode.SUB)
-        //    DetectionBound.size = new Vector3(PistolDist * Mathf.Tan(FieldOfView * Mathf.Deg2Rad) * 2f, 1f, PistolDist);
-
-        //DetectionBound.center = new Vector3(0, 0, DetectionBound.size.z / 2f);
     }
 
-	void Update () {
+    void Update() {
 
 
         if (JoyStick.position != Vector2.zero)
@@ -174,14 +168,14 @@ public class EquipPlayerManager : MonoBehaviour {
 
         if (DetectedEnemies.Count != 0)
             TargetFlock = SearchTargetFlock();
-	}
+    }
 
     void IdleState()
     {
         anim.SetBool("Walk", false);
         elapsedTime += Time.deltaTime;
 
-        if(elapsedTime >= 10f)
+        if (elapsedTime >= 10f)
         {
             RandomIdleAnim();
         }
@@ -189,11 +183,11 @@ public class EquipPlayerManager : MonoBehaviour {
 
     void RandomIdleAnim()
     {
-        if(weaponMode == WeaponMode.NONE)
+        if (weaponMode == WeaponMode.NONE)
         {
             int seed = Random.Range(1, 4);
 
-            switch(seed)
+            switch (seed)
             {
                 case 1:
                     anim.SetTrigger("RandomIdle01");
@@ -214,7 +208,7 @@ public class EquipPlayerManager : MonoBehaviour {
         Vector3 lookDir = JoyStick.position.x * Vector3.right + JoyStick.position.y * Vector3.forward;
         Quaternion rot = Quaternion.LookRotation(lookDir);
         transform.rotation = rot;
-        if(playerObj.transform.localRotation != Quaternion.LookRotation(Vector3.zero))
+        if (playerObj.transform.localRotation != Quaternion.LookRotation(Vector3.zero))
             playerObj.transform.localRotation = Quaternion.LookRotation(Vector3.zero);
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
         anim.SetBool("Walk", true);
@@ -225,7 +219,7 @@ public class EquipPlayerManager : MonoBehaviour {
     {
         SetDetectionCol();
 
-        switch(weaponMode)
+        switch (weaponMode)
         {
             case WeaponMode.NONE:
                 aimIK.enabled = false;
@@ -285,44 +279,28 @@ public class EquipPlayerManager : MonoBehaviour {
     public void ShootToGun()
     {
         float Damage = 0f;
-        
-        if(weaponMode == WeaponMode.PRIMARY)
+
+        if (weaponMode == WeaponMode.PRIMARY)
         {
             PrimaryMuzzle.GetComponent<MeshRenderer>().enabled = true;
             PrimaryMuzzle.GetComponent<AnimatedTexture>().PlayOneCircle();
             Damage = rifleDamage;
-            //if(Physics.Raycast(PrimaryShotPoint.position, PrimaryShotPoint.forward * RifleDist, out RayCastData))
-            //{
-            //    if(RayCastData.collider.gameObject.tag == "Obstacle")
-            //    {
-            //        Debug.Log("Hit Obstacle");
-            //        return;
-            //    }
-            //    else if(RayCastData.collider.gameObject.tag == "Enemy")
-            //    {
-            //        Debug.Log("HitEnemy");
-
-            //        //Enemy 피격 로직.
-            //        //죽기 전에 내부 클래스에서 리스트 삭제해주기.
-            //        //리더가 죽을 경우 새리더 임명하고 죽기.
-            //        //Destroy(RayCastData.collider.gameObject);
-            //    }
-            //}
         }
-        else if(weaponMode == WeaponMode.SUB)
+        else if (weaponMode == WeaponMode.SUB)
         {
             SubGunMuzzle.GetComponent<MeshRenderer>().enabled = true;
             SubGunMuzzle.GetComponent<AnimatedTexture>().PlayOneCircle();
             Damage = pistolDamage;
         }
 
-        if(TargetFlock) //타겟으로 지정된 적이 있을 때
+        if (TargetFlock) //타겟으로 지정된 적이 있을 때
         {
             Quaternion rot = Quaternion.LookRotation(TargetFlock.transform.position - transform.position);
 
             transform.rotation = rot;
 
-            TargetFlock.ShotFromPlayer(Damage);
+            TargetFlock.ShotFromPlayer(0f);
+            //TargetFlock.ShotFromPlayer(Damage);
         }
         else //타겟에 지정된 적이 없을 때
         {
@@ -343,20 +321,20 @@ public class EquipPlayerManager : MonoBehaviour {
             }
 
             DetectedEnemies = DetectedEnemies.OrderBy(p => p.DistToPlayer).ToList(); // 정렬.
-            
+
             // 가까운 적부터 타겟에 적합한지 판정.
-            foreach(Flock f in DetectedEnemies)
+            foreach (Flock f in DetectedEnemies)
             {
                 RaycastHit hit;
                 int layerMask = 1 << 31; //31: player
                 layerMask = ~layerMask;
                 //적과의 각도가 시야각(fieldOfView)안에 드는지
                 rayDirection = f.transform.position - transform.position;
-                
-                if(Vector3.Angle(rayDirection, transform.forward) < FieldOfView)
+
+                if (Vector3.Angle(rayDirection, transform.forward) < FieldOfView)
                 {
                     //레이케스팅후 벽이 가로막고 있으면 다음 순번.
-                    if(Physics.Raycast(transform.position, rayDirection, out hit, ViewDistance, layerMask))
+                    if (Physics.Raycast(transform.position, rayDirection, out hit, ViewDistance, layerMask))
                     {
                         if (hit.transform.tag != "Enemy")
                             continue;
@@ -364,7 +342,7 @@ public class EquipPlayerManager : MonoBehaviour {
                         {
                             if (hit.transform.GetComponent<Flock>().EnemyStat.Health > 0)
                             {
-                               // Debug.Log("f Pos: " + f.transform.localPosition + "  f ID: " + f.GetComponent<Flock>().EID);
+                                // Debug.Log("f Pos: " + f.transform.localPosition + "  f ID: " + f.GetComponent<Flock>().EID);
                                 return f;
                             }
                             else
@@ -372,7 +350,7 @@ public class EquipPlayerManager : MonoBehaviour {
                         }
                     }
                 }
-                
+
 
             }
 
@@ -380,11 +358,24 @@ public class EquipPlayerManager : MonoBehaviour {
         }
     }
 
-    void DetectAspect()
+    public void StartFire()
     {
-        //RaycastHit hit;
+        StartCoroutine(AutoFireChecker());
+    }
 
-        //rayDirection = transform.position - Flock
+    IEnumerator AutoFireChecker()
+    {
+        
+        anim.SetTrigger("Shoot");
+        if(TestEquipBtnManager.Instance.isFired)
+        {
+            yield return new WaitForSeconds(SHootRate);
+            StartCoroutine(AutoFireChecker());
+        }
+        else
+        {
+            yield return null;
+        }
     }
 
     void OnTriggerEnter(Collider col)

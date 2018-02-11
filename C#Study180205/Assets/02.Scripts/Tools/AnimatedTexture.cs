@@ -6,7 +6,7 @@ public class AnimatedTexture : MonoBehaviour
     public float fps = 30.0f;
     public Texture2D[] frames;
 
-    private int frameIndex;
+    private int frameIndex = 0;
     private MeshRenderer rendererMy;
 
     void Start()
@@ -25,9 +25,12 @@ public class AnimatedTexture : MonoBehaviour
     public void PlayOneCircle()
     {
         rendererMy.sharedMaterial.SetTexture("_MainTex", frames[frameIndex]);
-        frameIndex = (frameIndex + 1) % frames.Length;
+        //frameIndex = (frameIndex + 1) % frames.Length;
         if (frameIndex != frames.Length - 1)
+        {
+            frameIndex++;
             InvokeRepeating("PlayOneCircle", 1 / fps, 1 / fps);
+        }
         else
         {
             frameIndex = 0;
@@ -35,4 +38,5 @@ public class AnimatedTexture : MonoBehaviour
             CancelInvoke("PlayOneCircle");
         }
     }
+    
 }

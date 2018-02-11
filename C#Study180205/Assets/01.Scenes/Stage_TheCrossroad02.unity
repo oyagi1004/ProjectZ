@@ -287,7 +287,7 @@ Prefab:
     - target: {fileID: 114607751420534786, guid: ac1e3a75e5887a34aa2de3da98b6bb13,
         type: 2}
       propertyPath: flockSize
-      value: 50
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114607751420534786, guid: ac1e3a75e5887a34aa2de3da98b6bb13,
         type: 2}
@@ -1529,6 +1529,11 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1 &1010785194 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1588687901965432, guid: 9aaab4073a213f942afb3b0ad238a1bb,
+    type: 2}
+  m_PrefabInternal: {fileID: 2009362614}
 --- !u!43 &1204861734
 Mesh:
   m_ObjectHideFlags: 0
@@ -3086,6 +3091,11 @@ Prefab:
       propertyPath: fitWidth
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114532435222012174, guid: 9aaab4073a213f942afb3b0ad238a1bb,
+        type: 2}
+      propertyPath: ShootBtn
+      value: 
+      objectReference: {fileID: 1010785194}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9aaab4073a213f942afb3b0ad238a1bb, type: 2}
   m_IsPrefabParent: 0

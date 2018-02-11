@@ -4,13 +4,47 @@ timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
+    100000: eye
+    100002: eye2
+    100004: hair
+    100006: hair_inside
+    100008: //RootNode
+    100010: skull01
+    100012: skull_jaw01
+    400000: eye
+    400002: eye2
+    400004: hair
+    400006: hair_inside
+    400008: //RootNode
+    400010: skull01
+    400012: skull_jaw01
+    2300000: eye
+    2300002: eye2
+    2300004: hair
+    2300006: hair_inside
+    2300008: skull01
+    2300010: skull_jaw01
+    3300000: eye
+    3300002: eye2
+    3300004: hair
+    3300006: hair_inside
+    3300008: skull01
+    3300010: skull_jaw01
     4300000: skull01
     4300002: skull_jaw01
     4300004: hair
     4300006: eye2
     4300008: eye
     4300010: hair_inside
-  externalObjects: {}
+    7400000: laugh
+    7400002: vomit
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #0'
+    second: {fileID: 2100000, guid: f6430a771db020a46abfac3ffeb3699e, type: 2}
   materials:
     importMaterials: 1
     materialName: 3

@@ -4,11 +4,35 @@ timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: RingShape
+    100004: shapeCylinder
+    100006: shapeEightPoints
+    100008: sphereShape
+    400000: //RootNode
+    400002: RingShape
+    400004: shapeCylinder
+    400006: shapeEightPoints
+    400008: sphereShape
+    2300000: RingShape
+    2300002: shapeCylinder
+    2300004: shapeEightPoints
+    2300006: sphereShape
+    3300000: RingShape
+    3300002: shapeCylinder
+    3300004: shapeEightPoints
+    3300006: sphereShape
     4300000: RingShape
     4300002: sphereShape
     4300004: shapeCylinder
     4300006: shapeEightPoints
-  externalObjects: {}
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 9d82345d9096f174b8f5552c5f1ba65b, type: 2}
   materials:
     importMaterials: 1
     materialName: 3

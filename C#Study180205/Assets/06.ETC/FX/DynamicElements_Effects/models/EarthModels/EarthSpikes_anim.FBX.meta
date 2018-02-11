@@ -4,10 +4,38 @@ timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
+    100000: Dummy01
+    100002: Dummy02
+    100004: Dummy03
+    100006: Dummy04
+    100008: EarthSpike
+    100010: EarthSpike01
+    100012: EarthSpike02
+    100014: EarthSpike03
+    100016: //RootNode
+    400000: Dummy01
+    400002: Dummy02
+    400004: Dummy03
+    400006: Dummy04
+    400008: EarthSpike
+    400010: EarthSpike01
+    400012: EarthSpike02
+    400014: EarthSpike03
+    400016: //RootNode
+    2300000: EarthSpike
+    2300002: EarthSpike01
+    2300004: EarthSpike02
+    2300006: EarthSpike03
+    3300000: EarthSpike
+    3300002: EarthSpike01
+    3300004: EarthSpike02
+    3300006: EarthSpike03
     4300000: EarthSpike
     4300002: EarthSpike01
     4300004: EarthSpike02
     4300006: EarthSpike03
+    7400000: launch
+    11100000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1

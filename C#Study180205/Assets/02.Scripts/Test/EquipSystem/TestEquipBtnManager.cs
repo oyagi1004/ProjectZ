@@ -5,6 +5,54 @@ using UnityEngine;
 public class TestEquipBtnManager : MonoBehaviour {
     public UILabel WeaponModeLabel;
 
+    public GameObject ShootBtn;
+
+    public bool isFired
+    {
+        get;
+        private set;
+    }
+
+    private static TestEquipBtnManager instance = null;
+
+    public static TestEquipBtnManager Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            DestroyImmediate(gameObject);
+            return;
+        }
+
+        instance = this;
+
+        DontDestroyOnLoad(this);
+    }
+
+    void Start()
+    {
+        UIEventListener.Get(ShootBtn).onPress = OnPressShootBtn;
+    }
+
+    void Update()
+    {
+        if (ShootBtn.GetComponent<UIButton>().state == UIButtonColor.State.Normal)
+        {
+            isFired = false;
+        }
+        //else
+        //{
+        //    isFired = true;
+        //}
+    }
+
     public void OnTouchEquipModeChangeBtn()
     {
         if(EquipPlayerManager.Instance.weaponMode == EquipPlayerManager.WeaponMode.NONE)
@@ -27,7 +75,17 @@ public class TestEquipBtnManager : MonoBehaviour {
 	
     public void OnTouchShootBtn()
     {
-        EquipPlayerManager.Instance.anim.SetTrigger("Shoot");
+        isFired = true;
+        EquipPlayerManager.Instance.StartFire();
         //EquipPlayerManager.Instance.anim.SetBool("ShootSwitch", true);
+    }
+
+    public void OnPressShootBtn(GameObject sender, bool isPressed)
+    {
+        if(!isFired)
+        {
+            isFired = true;
+            EquipPlayerManager.Instance.StartFire();
+        }
     }
 }

@@ -4,6 +4,52 @@ timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: Object03
+    100004: Object08
+    100006: Object10
+    100008: Object14
+    100010: Object15
+    100012: Object16
+    100014: Object18
+    100016: Object19
+    100018: Plane66
+    100020: Plane68
+    100022: Plane69
+    400000: //RootNode
+    400002: Object03
+    400004: Object08
+    400006: Object10
+    400008: Object14
+    400010: Object15
+    400012: Object16
+    400014: Object18
+    400016: Object19
+    400018: Plane66
+    400020: Plane68
+    400022: Plane69
+    2300000: Object03
+    2300002: Object08
+    2300004: Object10
+    2300006: Object14
+    2300008: Object15
+    2300010: Object16
+    2300012: Object18
+    2300014: Object19
+    2300016: Plane66
+    2300018: Plane68
+    2300020: Plane69
+    3300000: Object03
+    3300002: Object08
+    3300004: Object10
+    3300006: Object14
+    3300008: Object15
+    3300010: Object16
+    3300012: Object18
+    3300014: Object19
+    3300016: Plane66
+    3300018: Plane68
+    3300020: Plane69
     4300000: Object03
     4300002: Object02
     4300004: Object07
@@ -24,6 +70,8 @@ ModelImporter:
     4300034: Object19
     4300036: Object20
     4300038: Object22
+    7400000: Take 001
+    11100000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
