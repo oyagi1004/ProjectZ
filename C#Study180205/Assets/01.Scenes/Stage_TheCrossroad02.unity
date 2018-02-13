@@ -1705,52 +1705,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114655415843445654, guid: 7c97cd290d78d66468791e80f503c44d,
         type: 2}
-      propertyPath: playerObj
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114655415843445654, guid: 7c97cd290d78d66468791e80f503c44d,
-        type: 2}
       propertyPath: JoyStick
       value: 
       objectReference: {fileID: 2009362617}
-    - target: {fileID: 137889452951403780, guid: 7c97cd290d78d66468791e80f503c44d,
+    - target: {fileID: 114408566764459810, guid: 7c97cd290d78d66468791e80f503c44d,
         type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 137839796963995522, guid: 7c97cd290d78d66468791e80f503c44d,
-        type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 137135613925069844, guid: 7c97cd290d78d66468791e80f503c44d,
-        type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 137226582082801182, guid: 7c97cd290d78d66468791e80f503c44d,
-        type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23811899851148378, guid: 7c97cd290d78d66468791e80f503c44d,
-        type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23540134967645840, guid: 7c97cd290d78d66468791e80f503c44d,
-        type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23640935175750238, guid: 7c97cd290d78d66468791e80f503c44d,
-        type: 2}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23725083290849858, guid: 7c97cd290d78d66468791e80f503c44d,
-        type: 2}
-      propertyPath: m_CastShadows
+      propertyPath: solver.poleWeight
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -558,6 +558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponModeLabel: {fileID: 114845024945834262}
+  ShootBtn: {fileID: 0}
 --- !u!114 &114545660095849728
 MonoBehaviour:
   m_ObjectHideFlags: 1

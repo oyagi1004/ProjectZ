@@ -75,9 +75,8 @@ public class TestEquipBtnManager : MonoBehaviour {
 	
     public void OnTouchShootBtn()
     {
-        isFired = true;
-        EquipPlayerManager.Instance.StartFire();
-        //EquipPlayerManager.Instance.anim.SetBool("ShootSwitch", true);
+        isFired = false;
+        //EquipPlayerManager.Instance.StartFire();
     }
 
     public void OnPressShootBtn(GameObject sender, bool isPressed)

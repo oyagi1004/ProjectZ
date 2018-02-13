@@ -66,6 +66,7 @@ public class EquipPlayerManager : MonoBehaviour {
     Transform AimTransform;
     Transform RifleAimTr;
     Transform PistolAimTr;
+    Transform AimTarget;
 
     //플래이어 시야각.
     public float FieldOfView = 45f;
@@ -133,6 +134,8 @@ public class EquipPlayerManager : MonoBehaviour {
             if (allchilds[i].name == "PistolAimTransform") PistolAimTr = allchilds[i];
 
             if (allchilds[i].name == "AimTransform") AimTransform = allchilds[i];
+
+            if (allchilds[i].name == "AimTarget") AimTarget = allchilds[i];
         }
         DetectionCol = GetComponent<BoxCollider>();
         RayCastData = new RaycastHit();
@@ -167,7 +170,23 @@ public class EquipPlayerManager : MonoBehaviour {
         }
 
         if (DetectedEnemies.Count != 0)
+        {
             TargetFlock = SearchTargetFlock();
+            if(TargetFlock)
+            {
+                AimTarget.position = new Vector3(TargetFlock.transform.position.x, TargetFlock.transform.position.y + 1f, TargetFlock.transform.position.z);
+                AimTarget.parent = TargetFlock.transform;
+                aimIK.enabled = true;
+            }
+            //if (weaponMode == WeaponMode.PRIMARY)
+            //    AimTarget = RifleAimTr;
+            //else if (weaponMode == WeaponMode.SUB)
+            //    AimTarget = PistolAimTr;
+        }
+        else
+        {
+            aimIK.enabled = false;
+        }
     }
 
     void IdleState()
@@ -295,9 +314,10 @@ public class EquipPlayerManager : MonoBehaviour {
 
         if (TargetFlock) //타겟으로 지정된 적이 있을 때
         {
-            Quaternion rot = Quaternion.LookRotation(TargetFlock.transform.position - transform.position);
+            aimIK.enabled = true;
+            //Quaternion rot = Quaternion.LookRotation(TargetFlock.transform.position - transform.position);
 
-            transform.rotation = rot;
+            //transform.rotation = rot;
 
             TargetFlock.ShotFromPlayer(0f);
             //TargetFlock.ShotFromPlayer(Damage);
@@ -366,9 +386,9 @@ public class EquipPlayerManager : MonoBehaviour {
     IEnumerator AutoFireChecker()
     {
         
-        anim.SetTrigger("Shoot");
         if(TestEquipBtnManager.Instance.isFired)
         {
+            anim.SetTrigger("Shoot");
             yield return new WaitForSeconds(SHootRate);
             StartCoroutine(AutoFireChecker());
         }
