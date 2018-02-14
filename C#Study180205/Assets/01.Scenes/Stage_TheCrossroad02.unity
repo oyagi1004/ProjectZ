@@ -1713,6 +1713,16 @@ Prefab:
       propertyPath: solver.poleWeight
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 54978292423822476, guid: 7c97cd290d78d66468791e80f503c44d,
+        type: 2}
+      propertyPath: m_Drag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114655415843445654, guid: 7c97cd290d78d66468791e80f503c44d,
+        type: 2}
+      propertyPath: FieldOfView
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c97cd290d78d66468791e80f503c44d, type: 2}
   m_IsPrefabParent: 0

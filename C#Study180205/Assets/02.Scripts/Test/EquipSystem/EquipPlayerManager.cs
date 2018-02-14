@@ -150,11 +150,12 @@ public class EquipPlayerManager : MonoBehaviour {
         if (weaponMode == WeaponMode.NONE)
             DetectionCol.size = new Vector3(1, 1, 1);
         else if (weaponMode == WeaponMode.PRIMARY)
-            DetectionCol.size = new Vector3(RifleDist * Mathf.Tan(FieldOfView * Mathf.Deg2Rad) * 2f, 1f, RifleDist);
+            DetectionCol.size = new Vector3(RifleDist * Mathf.Tan(FieldOfView * Mathf.Deg2Rad) * 2f, 1f, RifleDist * 2f);
         else if (weaponMode == WeaponMode.SUB)
-            DetectionCol.size = new Vector3(PistolDist * Mathf.Tan(FieldOfView * Mathf.Deg2Rad) * 2f, 1f, PistolDist);
+            DetectionCol.size = new Vector3(PistolDist * Mathf.Tan(FieldOfView * Mathf.Deg2Rad) * 2f, 1f, PistolDist *2f);
 
-        DetectionCol.center = new Vector3(0, 0, DetectionCol.size.z / 2f);
+        DetectionCol.center = new Vector3(0, 0, 0);
+        //DetectionCol.center = new Vector3(0, 0, DetectionCol.size.z / 2f);
     }
 
     void Update() {
@@ -314,10 +315,17 @@ public class EquipPlayerManager : MonoBehaviour {
 
         if (TargetFlock) //타겟으로 지정된 적이 있을 때
         {
-            aimIK.enabled = true;
-            //Quaternion rot = Quaternion.LookRotation(TargetFlock.transform.position - transform.position);
+            if(Vector3.Angle(transform.forward, TargetFlock.transform.position.normalized) <= FieldOfView)
+            {
+                aimIK.enabled = true;
+            }
+            else
+            {
+                Quaternion rot = Quaternion.LookRotation(TargetFlock.transform.position - transform.position);
 
-            //transform.rotation = rot;
+                transform.rotation = rot;
+
+            }
 
             TargetFlock.ShotFromPlayer(0f);
             //TargetFlock.ShotFromPlayer(Damage);
@@ -351,8 +359,8 @@ public class EquipPlayerManager : MonoBehaviour {
                 //적과의 각도가 시야각(fieldOfView)안에 드는지
                 rayDirection = f.transform.position - transform.position;
 
-                if (Vector3.Angle(rayDirection, transform.forward) < FieldOfView)
-                {
+                //if (Vector3.Angle(rayDirection, transform.forward) < FieldOfView)
+                //{
                     //레이케스팅후 벽이 가로막고 있으면 다음 순번.
                     if (Physics.Raycast(transform.position, rayDirection, out hit, ViewDistance, layerMask))
                     {
@@ -362,14 +370,18 @@ public class EquipPlayerManager : MonoBehaviour {
                         {
                             if (hit.transform.GetComponent<Flock>().EnemyStat.Health > 0)
                             {
-                                // Debug.Log("f Pos: " + f.transform.localPosition + "  f ID: " + f.GetComponent<Flock>().EID);
+                                if (Vector3.Angle(rayDirection, transform.forward) <= FieldOfView)
+                                    aimIK.solver.clampWeight = Mathf.Lerp(aimIK.solver.clampWeight, 0, Time.deltaTime * 2f);
+                                else
+                                    aimIK.solver.clampWeight = Mathf.Lerp(aimIK.solver.clampWeight, 1, Time.deltaTime * 2f);
+                            // Debug.Log("f Pos: " + f.transform.localPosition + "  f ID: " + f.GetComponent<Flock>().EID);
                                 return f;
                             }
                             else
                                 continue;
                         }
                     }
-                }
+                //}
 
 
             }
