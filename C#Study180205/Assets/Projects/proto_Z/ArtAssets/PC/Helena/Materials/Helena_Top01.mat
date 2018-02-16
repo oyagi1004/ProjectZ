@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Helena_Top01
-  m_Shader: {fileID: 4800000, guid: dc1377f80537afa40b2826e06da4463d, type: 3}
+  m_Shader: {fileID: 4800000, guid: 56d579d7575cd664bb44a9d5c9503eea, type: 3}
   m_ShaderKeywords: AMBIENT_ON BASE_BRDF LDIR_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -66,6 +66,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _XrayTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AMBIENT: 1
     - _BASE: 1
@@ -87,12 +91,14 @@ Material:
     - _Parallax: 0.02
     - _REFCUSTOM: 0
     - _RimFresnel: 1
-    - _RimIntensity: 1
+    - _RimIntensity: 1.77
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _XRAYEDGE: 0
+    - _XrayEdgeFresnel: 1
+    - _XrayIntensity: 1
     - _ZWrite: 1
     - _lmUV1: 0
     - _maskTex: 0
@@ -100,4 +106,5 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 1, g: 1, b: 1, a: 0.278481}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 0.2885906}
+    - _XrayColor: {r: 0, g: 0.7103448, b: 1, a: 0.63422817}
