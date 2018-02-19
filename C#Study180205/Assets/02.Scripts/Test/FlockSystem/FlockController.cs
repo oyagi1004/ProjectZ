@@ -46,7 +46,7 @@ public class FlockController : MonoBehaviour
     //플레어에 가장 근접한 플록.
     //public Flock ClosestFlock;
 
-   // Use this for initialization
+    // Use this for initialization
     void Start()
     {
         //TempCode
@@ -75,9 +75,9 @@ public class FlockController : MonoBehaviour
         if (flockSize >= grid.nodes.Length * 3)
             flockSize = grid.nodes.Length * 3;
 
-        ObstacleDetecter.radius = (grid.numOfColumns > grid.numOfRows) ? grid.numOfColumns : grid.numOfRows;
+        //ObstacleDetecter.radius = (grid.numOfColumns > grid.numOfRows) ? grid.numOfColumns : grid.numOfRows;
 
-        ObstacleList = GameObject.FindGameObjectsWithTag("Obstacle");
+        //ObstacleList = GameObject.FindGameObjectsWithTag("Obstacle");
     }
 
     IEnumerator CheckBoundIncludingChilds()
@@ -130,7 +130,7 @@ public class FlockController : MonoBehaviour
     {
         FlockNode curNode = grid.GetNodeByIndex(grid.GetGridIndex(flock.transform.position));
         grid.findStep = 1;
-        
+
         if (curNode.unitInNode < 3)
         {
             curNode.SetUnitInNode(flock);
@@ -139,31 +139,31 @@ public class FlockController : MonoBehaviour
         else
             FindClosedEmptyNode(curNode, flock);
     }
-    
+
     void FindClosedEmptyNode(FlockNode node, Flock flock)
     {
-        
+
         ArrayList neighbors = new ArrayList();
         grid.GetNeighbors(node, neighbors);
 
-        for(int i = 0; i < neighbors.Count; i++)
+        for (int i = 0; i < neighbors.Count; i++)
         {
             FlockNode neighborNode = (FlockNode)neighbors[i];
-            if(neighborNode.unitInNode < 3)
+            if (neighborNode.unitInNode < 3)
             {
                 neighborNode.SetUnitInNode(flock);
                 return;
             }
         }
-        if(grid.findStep < (grid.numOfColumns > grid.numOfRows ? grid.numOfColumns : grid.numOfRows ))
+        if (grid.findStep < (grid.numOfColumns > grid.numOfRows ? grid.numOfColumns : grid.numOfRows))
             grid.findStep++;
         else
         {
-            for(int i = 0; i < grid.numOfColumns; i++)
+            for (int i = 0; i < grid.numOfColumns; i++)
             {
-                for(int j = 0; j < grid.numOfRows; j++)
+                for (int j = 0; j < grid.numOfRows; j++)
                 {
-                    if(grid.nodes[i,j].unitInNode < 3)
+                    if (grid.nodes[i, j].unitInNode < 3)
                     {
                         grid.nodes[i, j].SetUnitInNode(flock);
                         return;
@@ -188,7 +188,7 @@ public class FlockController : MonoBehaviour
         //향후 시야 추가.
         foreach (Flock flock in flockList)
         {
-            if(flock.curState != Flock.FlockState.DEAD)
+            if (flock.curState != Flock.FlockState.DEAD)
             {
                 if (dist >= ChaseDistance)
                 {
@@ -223,7 +223,7 @@ public class FlockController : MonoBehaviour
 
     public Flock FindFlockByID(int id)
     {
-        foreach(Flock f in flockList)
+        foreach (Flock f in flockList)
         {
             if (f.EID == id)
                 return f;
@@ -242,10 +242,10 @@ public class FlockController : MonoBehaviour
         Debug.DrawLine(rightTop, leftTop, DebugColor);
         Debug.DrawLine(leftTop, leftBottom, DebugColor);
 
-        if(grid && grid.showGrid)
+        if (grid && grid.showGrid)
         {
             grid.DebugDrawGrid(transform.position, grid.numOfRows, grid.numOfColumns, grid.gridCellSize, Color.white);
-            
+
         }
     }
 }

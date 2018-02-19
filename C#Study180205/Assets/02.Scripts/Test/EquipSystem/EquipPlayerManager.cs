@@ -4,7 +4,8 @@ using System.Linq;
 using UnityEngine;
 using RootMotion.FinalIK;
 
-public class EquipPlayerManager : MonoBehaviour {
+public class EquipPlayerManager : MonoBehaviour
+{
 
     private static EquipPlayerManager instance = null;
 
@@ -92,7 +93,8 @@ public class EquipPlayerManager : MonoBehaviour {
         DontDestroyOnLoad(this);
     }
 
-    void Start() {
+    void Start()
+    {
         Init();
     }
 
@@ -150,15 +152,16 @@ public class EquipPlayerManager : MonoBehaviour {
         if (weaponMode == WeaponMode.NONE)
             DetectionCol.size = new Vector3(1, 1, 1);
         else if (weaponMode == WeaponMode.PRIMARY)
-            DetectionCol.size = new Vector3(RifleDist * Mathf.Tan(FieldOfView * Mathf.Deg2Rad) * 2f, 1f, RifleDist * 2f);
+            DetectionCol.size = new Vector3(RifleDist * 2f, 1f, RifleDist * 2f);
         else if (weaponMode == WeaponMode.SUB)
-            DetectionCol.size = new Vector3(PistolDist * Mathf.Tan(FieldOfView * Mathf.Deg2Rad) * 2f, 1f, PistolDist *2f);
+            DetectionCol.size = new Vector3(PistolDist * 2f, 1f, PistolDist * 2f);
 
         DetectionCol.center = new Vector3(0, 0, 0);
         //DetectionCol.center = new Vector3(0, 0, DetectionCol.size.z / 2f);
     }
 
-    void Update() {
+    void Update()
+    {
 
 
         if (JoyStick.position != Vector2.zero)
@@ -173,7 +176,7 @@ public class EquipPlayerManager : MonoBehaviour {
         if (DetectedEnemies.Count != 0)
         {
             TargetFlock = SearchTargetFlock();
-            if(TargetFlock)
+            if (TargetFlock)
             {
                 AimTarget.position = new Vector3(TargetFlock.transform.position.x, TargetFlock.transform.position.y + 1f, TargetFlock.transform.position.z);
                 AimTarget.parent = TargetFlock.transform;
@@ -315,7 +318,7 @@ public class EquipPlayerManager : MonoBehaviour {
 
         if (TargetFlock) //타겟으로 지정된 적이 있을 때
         {
-            if(Vector3.Angle(transform.forward, TargetFlock.transform.position.normalized) <= FieldOfView)
+            if (Vector3.Angle(transform.forward, TargetFlock.transform.position.normalized) <= FieldOfView)
             {
                 aimIK.enabled = true;
             }
@@ -361,26 +364,26 @@ public class EquipPlayerManager : MonoBehaviour {
 
                 //if (Vector3.Angle(rayDirection, transform.forward) < FieldOfView)
                 //{
-                    //레이케스팅후 벽이 가로막고 있으면 다음 순번.
-                    if (Physics.Raycast(transform.position, rayDirection, out hit, ViewDistance, layerMask))
+                //레이케스팅후 벽이 가로막고 있으면 다음 순번.
+                if (Physics.Raycast(transform.position, rayDirection, out hit, ViewDistance, layerMask))
+                {
+                    if (hit.transform.tag != "Enemy")
+                        continue;
+                    else
                     {
-                        if (hit.transform.tag != "Enemy")
-                            continue;
-                        else
+                        if (hit.transform.GetComponent<Flock>().EnemyStat.Health > 0)
                         {
-                            if (hit.transform.GetComponent<Flock>().EnemyStat.Health > 0)
-                            {
-                                if (Vector3.Angle(rayDirection, transform.forward) <= FieldOfView)
-                                    aimIK.solver.clampWeight = Mathf.Lerp(aimIK.solver.clampWeight, 0, Time.deltaTime * 2f);
-                                else
-                                    aimIK.solver.clampWeight = Mathf.Lerp(aimIK.solver.clampWeight, 1, Time.deltaTime * 2f);
-                            // Debug.Log("f Pos: " + f.transform.localPosition + "  f ID: " + f.GetComponent<Flock>().EID);
-                                return f;
-                            }
+                            if (Vector3.Angle(rayDirection, transform.forward) <= FieldOfView)
+                                aimIK.solver.clampWeight = Mathf.Lerp(aimIK.solver.clampWeight, 0, Time.deltaTime * 2f);
                             else
-                                continue;
+                                aimIK.solver.clampWeight = Mathf.Lerp(aimIK.solver.clampWeight, 1, Time.deltaTime * 2f);
+                            // Debug.Log("f Pos: " + f.transform.localPosition + "  f ID: " + f.GetComponent<Flock>().EID);
+                            return f;
                         }
+                        else
+                            continue;
                     }
+                }
                 //}
 
 
@@ -397,8 +400,8 @@ public class EquipPlayerManager : MonoBehaviour {
 
     IEnumerator AutoFireChecker()
     {
-        
-        if(TestEquipBtnManager.Instance.isFired)
+
+        if (TestEquipBtnManager.Instance.isFired)
         {
             anim.SetTrigger("Shoot");
             yield return new WaitForSeconds(SHootRate);
@@ -428,7 +431,7 @@ public class EquipPlayerManager : MonoBehaviour {
 
     void OnDrawGizmos()
     {
-        if(PrimaryShotPoint)
+        if (PrimaryShotPoint)
             Debug.DrawRay(PrimaryShotPoint.position, PrimaryShotPoint.forward * RifleDist, Color.green);
 
 
@@ -436,7 +439,7 @@ public class EquipPlayerManager : MonoBehaviour {
         //Vector3 leftTop = new Vector3(DetectionBound.min.x, 0f, DetectionBound.max.z);
         //Vector3 rightBottom = new Vector3(DetectionBound.max.x, 0f, DetectionBound.min.z);
         //Vector3 rightTop = new Vector3(DetectionBound.max.x, 0f, DetectionBound.max.z);
-        
+
         //Debug.DrawLine(leftBottom, rightBottom, Color.white);
         //Debug.DrawLine(rightBottom, rightTop, Color.white);
         //Debug.DrawLine(rightTop, leftTop, Color.white);
