@@ -1,0 +1,75 @@
+﻿{
+	"ItemList" :
+	[
+		{
+			"ItemID" : 1, 
+			"ItemName" : "포션",
+			"Category" : "Food",
+			"Description" : "HP를 30% 즉시 회복시킨다.",
+			"MainStatPoint" : "Health",
+			"MainStatType" :  "Multiply",
+			"MainStat" : 1.3,
+			"SubStatPoint" : "Empty",
+			"SubStatType" : "Empty",
+			"SubStat" : 0,
+			"IconName" : "Icon_WP_ARA_1t_Laser",
+			"Cost" : 100
+		},
+		{
+			"ItemID" : 2, 
+			"ItemName" : "반지",
+			"Category" : "Wearable",
+			"Description" : "간지가 난다. \n 팔면 돈됨.",
+			"MainStatPoint" : "Empty",
+			"MainStatType" :  "Empty",
+			"MainStat" : 0,
+			"SubStatPoint" : "Empty",
+			"SubStatType" : "Empty",
+			"SubStat" : 0,
+			"IconName" : "Icon_WP_ARA_1t_Neutronburster",
+			"Cost" : 1000
+		},
+		{
+			"ItemID" : 3, 
+			"ItemName" : "웨이 프로틴",
+			"Category" : "Food" ,
+			"Description" : "고품질 유청단백.\n근육량이 증가하여 힘이 3증가한다.\n체중 증가로 민첩성이 1하락한다.",
+			"MainStatPoint" : "Power",
+			"MainStatType" :  "Plus",
+			"MainStat" : 3,
+			"SubStatPoint" : "Speed",
+			"SubStatType" : "Plus",
+			"SubStat" : -1,
+			"IconName" : "Icon_WP_ARA_1t_Pulsegun",
+			"Cost" : 500	
+		},
+		{
+			"ItemID" : 4, 
+			"ItemName" : "방탄유리야 이븅신아",
+			"Category" : "Wearable" ,
+			"Description" : "이거 방탄유리라고 이 븅신아~..쏴! 나안나가!!\n아무튼, 입은 피해의 30%를 감소시킨다.",
+			"MainStatPoint" : "Damage",
+			"MainStatType" :  "Devision",
+			"MainStat" : 0.3,
+			"SubStatPoint" : "Empty",
+			"SubStatType" : "Empty",
+			"SubStat" : 0,
+			"IconName" : "Icon_WP_ARA_2t_Chainlaser",
+			"Cost" : 500
+		},
+		{
+			"ItemID" : 5, 
+			"ItemName" : "화염병",
+			"Category" : "Disposal" ,
+			"Description" : "살살 태워..\n 전방에 일정시간동안 불꽃을 일으켜 지속적인 대미지를 준다.",
+			"MainStatPoint" : "eDamage",
+			"MainStatType" :  "DotMinus",
+			"MainStat" : 10,
+			"SubStatPoint" : "Empty",
+			"SubStatType" : "Empty",
+			"SubStat" : 0,
+			"IconName" : "Icon_WP_ARA_2t_Gammaburster",
+			"Cost" : 150
+		}
+	]
+}

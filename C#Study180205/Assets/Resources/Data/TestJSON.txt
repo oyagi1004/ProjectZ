@@ -1,0 +1,29 @@
+﻿{
+	"DialogueList" : 
+	[
+		{
+		"Script_Id": 1,
+		"Script" : "GOOD, BETTER, BEST!!",
+		"Actor" : 1,
+		"Next_Id" : 2
+		},
+		{
+		"Script_Id": 2,
+		"Script" : "아빠 미워!!",
+		"Actor" : 2,
+		"Next_Id" : 3
+		},
+		{
+		"Script_Id": 3,
+		"Script" : "슈발?",
+		"Actor" : 1,
+		"Next_Id" : 0
+		},
+		{
+		"Script_Id": 4,
+		"Script" : "안녕하신가.\n 쓸만한 물건이 있으면 얼른 집어가시게.\n 살아있을때 하나라도 건지라구.",
+		"Actor" : 11,
+		"Next_Id" : 0
+		}
+	]
+}

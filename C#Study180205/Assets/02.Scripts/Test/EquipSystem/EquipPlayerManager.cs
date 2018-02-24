@@ -80,6 +80,8 @@ public class EquipPlayerManager : MonoBehaviour
     public List<Flock> DetectedEnemies;
     Flock TargetFlock;
 
+    public float HitRate = 0.96f;
+
     void Awake()
     {
         if (instance != null)
@@ -105,7 +107,7 @@ public class EquipPlayerManager : MonoBehaviour
         anim = playerObj.GetComponent<Animator>();
 
         aimIK = playerObj.GetComponent<AimIK>();
-        aimIK.enabled = false;
+        //aimIK.enabled = false;
 
         weaponMode = WeaponMode.NONE;
 
@@ -180,7 +182,7 @@ public class EquipPlayerManager : MonoBehaviour
             {
                 AimTarget.position = new Vector3(TargetFlock.transform.position.x, TargetFlock.transform.position.y + 1f, TargetFlock.transform.position.z);
                 AimTarget.parent = TargetFlock.transform;
-                aimIK.enabled = true;
+                //aimIK.enabled = true;
             }
             //if (weaponMode == WeaponMode.PRIMARY)
             //    AimTarget = RifleAimTr;
@@ -189,7 +191,8 @@ public class EquipPlayerManager : MonoBehaviour
         }
         else
         {
-            aimIK.enabled = false;
+            //aimIK.enabled = false;
+            aimIK.solver.clampWeight = 1f;
         }
     }
 
@@ -245,7 +248,7 @@ public class EquipPlayerManager : MonoBehaviour
         switch (weaponMode)
         {
             case WeaponMode.NONE:
-                aimIK.enabled = false;
+                //aimIK.enabled = false;
 
                 anim.SetBool("PistolMode", false);
                 anim.SetBool("RifleMode", false);
@@ -318,13 +321,16 @@ public class EquipPlayerManager : MonoBehaviour
 
         if (TargetFlock) //타겟으로 지정된 적이 있을 때
         {
-            if (Vector3.Angle(transform.forward, TargetFlock.transform.position.normalized) <= FieldOfView)
+            Vector3 dir = TargetFlock.transform.position - transform.position;
+            if (Vector3.Angle(transform.forward, dir) <= FieldOfView)
             {
-                aimIK.enabled = true;
+                //aimIK.enabled = true;
+                aimIK.solver.clampWeight = 0f;
             }
             else
             {
-                Quaternion rot = Quaternion.LookRotation(TargetFlock.transform.position - transform.position);
+                aimIK.solver.clampWeight = 1f;
+                Quaternion rot = Quaternion.LookRotation(dir);
 
                 transform.rotation = rot;
 
@@ -374,7 +380,7 @@ public class EquipPlayerManager : MonoBehaviour
                         if (hit.transform.GetComponent<Flock>().EnemyStat.Health > 0)
                         {
                             if (Vector3.Angle(rayDirection, transform.forward) <= FieldOfView)
-                                aimIK.solver.clampWeight = Mathf.Lerp(aimIK.solver.clampWeight, 0, Time.deltaTime * 2f);
+                                aimIK.solver.clampWeight = Mathf.Lerp(aimIK.solver.clampWeight, 0, Time.deltaTime * 0.3f);
                             else
                                 aimIK.solver.clampWeight = Mathf.Lerp(aimIK.solver.clampWeight, 1, Time.deltaTime * 2f);
                             // Debug.Log("f Pos: " + f.transform.localPosition + "  f ID: " + f.GetComponent<Flock>().EID);
@@ -445,4 +451,5 @@ public class EquipPlayerManager : MonoBehaviour
         //Debug.DrawLine(rightTop, leftTop, Color.white);
         //Debug.DrawLine(leftTop, leftBottom, Color.white);
     }
+
 }
