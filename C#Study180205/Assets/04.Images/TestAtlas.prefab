@@ -54,8 +54,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 80a02232e4cb1f043bc36385d59704a8, type: 2}
   mSprites:
   - name: Berry_02
-    x: 577
-    y: 335
+    x: 503
+    y: 41
     width: 64
     height: 64
     borderLeft: 0
@@ -67,8 +67,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Berry_03
-    x: 503
-    y: 46
+    x: 823
+    y: 49
     width: 64
     height: 64
     borderLeft: 0
@@ -80,8 +80,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Book_00
-    x: 568
-    y: 26
+    x: 888
+    y: 49
     width: 64
     height: 64
     borderLeft: 0
@@ -93,8 +93,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Book_03
-    x: 568
-    y: 91
+    x: 953
+    y: 114
     width: 64
     height: 64
     borderLeft: 0
@@ -106,8 +106,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Cloak_02
-    x: 750
-    y: 448
+    x: 888
+    y: 114
     width: 64
     height: 64
     borderLeft: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Cloak_03
-    x: 707
-    y: 318
+    x: 916
+    y: 179
     width: 64
     height: 64
     borderLeft: 0
@@ -132,8 +132,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Coin_03
-    x: 707
-    y: 383
+    x: 758
+    y: 69
     width: 64
     height: 64
     borderLeft: 0
@@ -144,9 +144,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: colt
+    x: 221
+    y: 361
+    width: 256
+    height: 151
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Crystal Ball_02
-    x: 633
-    y: 75
+    x: 693
+    y: 52
     width: 64
     height: 64
     borderLeft: 0
@@ -158,8 +171,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Crystal Ball_03
-    x: 685
-    y: 448
+    x: 693
+    y: 117
     width: 64
     height: 64
     borderLeft: 0
@@ -171,8 +184,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Essence_03
-    x: 325
-    y: 8
+    x: 693
+    y: 182
     width: 64
     height: 64
     borderLeft: 0
@@ -184,8 +197,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Flower Bunch_03
-    x: 260
-    y: 8
+    x: 851
+    y: 179
     width: 64
     height: 64
     borderLeft: 0
@@ -197,8 +210,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Gems_01
-    x: 195
-    y: 8
+    x: 758
+    y: 134
     width: 64
     height: 64
     borderLeft: 0
@@ -210,8 +223,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Gems_03
-    x: 633
-    y: 10
+    x: 758
+    y: 4
     width: 64
     height: 64
     borderLeft: 0
@@ -262,8 +275,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ingame_control_pin
-    x: 438
-    y: 111
+    x: 798
+    y: 264
     width: 109
     height: 109
     borderLeft: 0
@@ -275,7 +288,7 @@ MonoBehaviour:
     paddingTop: 3
     paddingBottom: 3
   - name: ingame_skill_btndown
-    x: 374
+    x: 645
     y: 360
     width: 152
     height: 152
@@ -288,8 +301,8 @@ MonoBehaviour:
     paddingTop: 3
     paddingBottom: 3
   - name: ingame_skill_btnUp
-    x: 221
-    y: 360
+    x: 540
+    y: 106
     width: 152
     height: 152
     borderLeft: 0
@@ -301,8 +314,8 @@ MonoBehaviour:
     paddingTop: 3
     paddingBottom: 3
   - name: ingame_skill_cooltime
-    x: 438
-    y: 221
+    x: 798
+    y: 374
     width: 138
     height: 138
     borderLeft: 0
@@ -314,8 +327,8 @@ MonoBehaviour:
     paddingTop: 10
     paddingBottom: 10
   - name: lock
-    x: 527
-    y: 400
+    x: 693
+    y: 247
     width: 92
     height: 112
     borderLeft: 0
@@ -326,9 +339,35 @@ MonoBehaviour:
     paddingRight: 18
     paddingTop: 9
     paddingBottom: 7
+  - name: m16
+    x: 438
+    y: 108
+    width: 101
+    height: 252
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 7
+    paddingRight: 20
+    paddingTop: 4
+    paddingBottom: 0
+  - name: m4
+    x: 540
+    y: 259
+    width: 104
+    height: 253
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 3
+    paddingTop: 1
+    paddingBottom: 2
   - name: Metal Case_00
-    x: 613
-    y: 205
+    x: 568
+    y: 41
     width: 64
     height: 64
     borderLeft: 0
@@ -340,8 +379,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Metal Case_01
-    x: 678
-    y: 253
+    x: 823
+    y: 114
     width: 64
     height: 64
     borderLeft: 0
@@ -353,8 +392,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: metal chest plate
-    x: 698
-    y: 188
+    x: 351
+    y: 296
     width: 64
     height: 64
     borderLeft: 0
@@ -366,84 +405,6 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: metal sword
-    x: 642
-    y: 383
-    width: 64
-    height: 64
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Necklace_02
-    x: 642
-    y: 318
-    width: 64
-    height: 64
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Necklace_03
-    x: 633
-    y: 140
-    width: 64
-    height: 64
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Ornament_02
-    x: 620
-    y: 448
-    width: 64
-    height: 64
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Ornament_03
-    x: 577
-    y: 270
-    width: 64
-    height: 64
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Parchment_02
-    x: 130
-    y: 8
-    width: 64
-    height: 64
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Ruin Stone_01
     x: 0
     y: 8
     width: 64
@@ -456,7 +417,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Ruin Stone_02
+  - name: Necklace_02
     x: 65
     y: 8
     width: 64
@@ -469,9 +430,87 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Shirt_00
+  - name: Necklace_03
+    x: 286
+    y: 296
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Ornament_02
+    x: 221
+    y: 296
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Ornament_03
     x: 438
-    y: 46
+    y: 43
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Parchment_02
+    x: 937
+    y: 383
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Ruin Stone_01
+    x: 937
+    y: 448
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Ruin Stone_02
+    x: 786
+    y: 199
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Shirt_00
+    x: 908
+    y: 244
     width: 64
     height: 64
     borderLeft: 0
@@ -483,8 +522,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Shirt_01
-    x: 221
-    y: 295
+    x: 908
+    y: 309
     width: 64
     height: 64
     borderLeft: 0
@@ -496,8 +535,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Small Potion_00
-    x: 286
-    y: 295
+    x: 195
+    y: 8
     width: 64
     height: 64
     borderLeft: 0
@@ -509,8 +548,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Small Potion_03
-    x: 351
-    y: 295
+    x: 130
+    y: 8
     width: 64
     height: 64
     borderLeft: 0
@@ -522,8 +561,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Wood_00
-    x: 548
-    y: 156
+    x: 325
+    y: 8
     width: 64
     height: 64
     borderLeft: 0
@@ -535,8 +574,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Wood_01
-    x: 743
-    y: 253
+    x: 260
+    y: 8
     width: 64
     height: 64
     borderLeft: 0

@@ -50,8 +50,17 @@ public class FlockController : MonoBehaviour
     void Start()
     {
         //TempCode
-        EnemyData.Read();
+        //EnemyData.Read();
 
+        
+
+        //ObstacleDetecter.radius = (grid.numOfColumns > grid.numOfRows) ? grid.numOfColumns : grid.numOfRows;
+
+        //ObstacleList = GameObject.FindGameObjectsWithTag("Obstacle");
+    }
+
+    public void InitFlockController()
+    {
         grid = GetComponent<FlockGrid>();
         grid.InitGrid();
 
@@ -74,10 +83,6 @@ public class FlockController : MonoBehaviour
 
         if (flockSize >= grid.nodes.Length * 3)
             flockSize = grid.nodes.Length * 3;
-
-        //ObstacleDetecter.radius = (grid.numOfColumns > grid.numOfRows) ? grid.numOfColumns : grid.numOfRows;
-
-        //ObstacleList = GameObject.FindGameObjectsWithTag("Obstacle");
     }
 
     IEnumerator CheckBoundIncludingChilds()

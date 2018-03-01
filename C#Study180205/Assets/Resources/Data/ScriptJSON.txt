@@ -1,0 +1,29 @@
+﻿{
+	"ScriptList" :
+	[
+		{
+			"ScriptID" : 1, 
+			"Script_KOR" : "블루배리",
+			"Script_ENG" : "Food",
+			"SpeakerID" : 1
+		},
+		{
+			"ScriptID" : 2, 
+			"Script_KOR" : "블루배리",
+			"Script_ENG" : "Food",
+			"SpeakerID" : 1
+		},
+		{
+			"ScriptID" : 3, 
+			"Script_KOR" : "블루배리",
+			"Script_ENG" : "Food",
+			"SpeakerID" : 1
+		},
+		{
+			"ScriptID" : 4, 
+			"Script_KOR" : "블루배리",
+			"Script_ENG" : "Food",
+			"SpeakerID" : 1
+		}
+	]
+}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class AnimationEvent : MonoBehaviour {
     public void TurnOffIK(string msg)
     {
-        PlayerManager.Instance.EnableIK(false);
+        //PlayerManager.Instance.EnableIK(false);
         Debug.Log(msg);
     }
 

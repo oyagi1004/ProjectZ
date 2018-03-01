@@ -1,0 +1,25 @@
+﻿{
+	"DescriptionList" :
+	[
+		{
+			"DescID" : 1, 
+			"Desc_KOR" : "블루배리",
+			"Desc_ENG" : "Food"
+		},
+		{
+			"DescID" : 2, 
+			"Desc_KOR" : "블루배리",
+			"Desc_ENG" : "Food"
+		},
+		{
+			"DescID" : 3, 
+			"Desc_KOR" : "블루배리",
+			"Desc_ENG" : "Food"
+		},
+		{
+			"DescID" : 4, 
+			"Desc_KOR" : "블루배리",
+			"Desc_ENG" : "Food"
+		}
+	]
+}

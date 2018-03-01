@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour {
     
     public void OnTouchAttackBtn()
     {
-        PlayerManager.Instance.SetAttack();
+        //PlayerManager.Instance.SetAttack();
     }
 
 }

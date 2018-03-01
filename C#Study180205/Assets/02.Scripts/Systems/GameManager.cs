@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour {
     }
 
     bool isGameStart = false;
-    
+
+    FlockController[] FlockCtrl;
     private void Awake()
     {
         if(instance != null)
@@ -29,131 +30,43 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
-    List<GameObject> Enemies;
-
-    List<GameObject> ClosedEnemies;
-    GameObject ClosedEnemy;
-
-    GameObject[] SpawnPoints;
-    int SpawnMobsNum = 10; // 스테이지 데이터화 시킬것.
-
-	void Start () {
+    void Start()
+    {
         InitGame();
     }
-	
-    public void InitGame()
-    {
-        Enemies = new List<GameObject>();
-        ClosedEnemies = new List<GameObject>();
 
-        SpawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
-         
+    void InitGame()
+    {
+        InitData();
+        FindObject();
+        InitObject();
+    }
+
+    void InitData()
+    {
         CharacterData.Read();
+        ItemData.Read();
         EnemyData.Read();
-
-        PlayerManager.Instance.InitPlayer();
-        FollowCam.Instance.InitCam();
-
-        //SpawnEnemy();
     }
 
-    void SpawnEnemy()
+    void FindObject()
     {
-        StartCoroutine(EnemySpawn());
+        //GameManager가 관리하는 오브젝트들을 찾아서 할당.
+
+        FlockCtrl = GameObject.FindObjectsOfType<FlockController>();
     }
 
-    IEnumerator EnemySpawn()
+    void InitObject()
     {
-        if(SpawnMobsNum > 0)
+        //GameManager에 할당된 오브젝트들을 찾아서 초기화(각 오브젝트 클래스의 초기화 함수를 호출할 것.)
+        foreach(FlockController f in FlockCtrl)
         {
-            int seed = Random.Range(1,SpawnPoints.Length + 1);
-            GameObject obj;
-            yield return new WaitForSeconds(1f);
-            SpawnMobsNum--;
-            if(seed % 2 == 1)
-            {
-               obj = Instantiate(Resources.Load("Prefabs/ZombieM01"), SpawnPoints[seed-1].transform) as GameObject;
-            }
-            else
-            {
-                obj = Instantiate(Resources.Load("Prefabs/ZombieF01"), SpawnPoints[seed-1].transform) as GameObject;
-            }
-
-            AddEnemies(obj);
+            f.InitFlockController();
         }
-
-
-        if (SpawnMobsNum != 0)
-            yield return StartCoroutine(EnemySpawn());
-        else
-            yield return null;
     }
 
     void Update()
     {
-        CheckClosedEnemy();
-    }
 
-    public void AddEnemies(GameObject obj)
-    {
-        Enemies.Add(obj);
-    }
-
-    public void DeleteEnemies(GameObject obj)
-    {
-        Enemies.Remove(obj);
-    }
-
-    public void AddClosedEnemyList(GameObject obj)
-    {
-        ClosedEnemies.Add(obj);
-    }
-
-    public void DeleteClosedEnemyList(GameObject obj)
-    {
-        ClosedEnemies.Remove(obj);
-    }
-
-    void CheckClosedEnemy()
-    {
-        if(ClosedEnemies.Count > 0)
-        {
-            PlayerManager.Instance.attackState = PlayerManager.AttackState.FIRE;
-        }
-        else
-        {
-            PlayerManager.Instance.attackState = PlayerManager.AttackState.NONE;
-        }
-    }
-
-    public GameObject GetClosedEnemy()
-    {
-        float dist = 0f;
-        foreach(GameObject obj in ClosedEnemies)
-        {
-            if (dist == 0f)
-            {
-                dist = Vector3.Distance(obj.transform.position, PlayerManager.Instance.transform.position);
-                ClosedEnemy = obj;
-            }
-            else
-            {
-                float tempDist = Vector3.Distance(obj.transform.position, PlayerManager.Instance.transform.position);
-                if (dist > tempDist)
-                {
-                    dist = tempDist;
-                    ClosedEnemy = obj;
-                }
-            }
-        }
-
-        return ClosedEnemy;
-    }
-
-    public void DestroyManagers()
-    {
-        FollowCam.Instance.DestroyManager();
-        PlayerManager.Instance.DestroyManager();
-        DestroyImmediate(gameObject);
     }
 }

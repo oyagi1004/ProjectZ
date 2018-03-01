@@ -167,7 +167,7 @@ public class Flock : EnemyFSM
 
             Vector3 randomWeight = Vector3.zero; // PC 주변의 올바른 보정값을 알아낸뒤 수정.
 
-            //agent.destination = playerTransform.position + randomWeight;
+            agent.destination = playerTransform.position + randomWeight;
         }
 
     }
